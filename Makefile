@@ -16,7 +16,7 @@ GO_FLAGS    = -ldflags "$(GO_LDFLAGS)"
 all: $(PROJECT)
 
 $(PROJECT): *.go
-	CGO_ENABLED=1 $(GO_BUILD) -o $(PROJECT) $(GO_FLAGS) *.go
+	CGO_ENABLED=0 $(GO_BUILD) -o $(PROJECT) $(GO_FLAGS) *.go
 
 .PHONY: clean
 clean:
